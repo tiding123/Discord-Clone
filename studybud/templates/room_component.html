@@ -1,0 +1,16 @@
+{% for room in rooms %}
+        <div>
+            <a href="/profile/{{room.host.id}}">@{{room.host.username}}</a>
+            <div>
+            <a href="/update_room/{{room.id}}">
+                Edit
+            </a>
+            <a href="/delete_room/{{room.id}}">
+                Delete
+            </a>
+            </div>
+            <h3>{{room.id}} - <a href="/room/{{room.id}}">{{room.name}}</a></h3>
+            <small>{{room.topic.name}}</small>
+            <hr>
+        </div>
+{%endfor%}
